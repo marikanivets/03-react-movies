@@ -1,3 +1,4 @@
+// @ts-ignore
 import React, { useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import { Movie } from '../../types/movie';
@@ -37,7 +38,7 @@ export default function MovieModal({ movie, onClose }: MovieModalProps) {
         </button>
         {movie.backdrop_path ? (
           <img
-            src={`https://tmdb.org{movie.backdrop_path}`}
+            src={`https://tmdb.org${movie.backdrop_path}`}
             alt={movie.title}
             className={css.image}
           />

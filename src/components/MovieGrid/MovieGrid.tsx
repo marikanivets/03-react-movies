@@ -17,8 +17,7 @@ export default function MovieGrid({ movies, onSelect }: MovieGridProps) {
             {movie.poster_path ? (
               <img
                 className={css.image}
-                /* Исправлено: правильный URL картинок и корректная интерполяция ${...} */
-                src={`https://tmdb.org{movie.poster_path}`}
+                src={`https://tmdb.org${movie.poster_path}`}
                 alt={movie.title}
                 loading="lazy"
               />
@@ -32,4 +31,3 @@ export default function MovieGrid({ movies, onSelect }: MovieGridProps) {
     </ul>
   );
 }
-
