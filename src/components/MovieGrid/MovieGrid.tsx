@@ -1,7 +1,7 @@
 // @ts-ignore
 import React from 'react';
-import { Movie } from '../../services/movieService';
-import css from './MovieGrid.module.css';
+import { Movie } from '../../types/movie'; 
+import css from './MovieGrid.module.css'; 
 
 interface MovieGridProps {
   movies: Movie[];
