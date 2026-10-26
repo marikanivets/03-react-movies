@@ -1,4 +1,3 @@
-// src/services/movieService.ts
 import axios from 'axios';
 import { Movie } from '../types/movie';
 
@@ -9,10 +8,10 @@ interface TMDBResponse {
   total_results: number;
 }
 
-const TOKEN = (import.meta as any).env.VITE_TMDB_TOKEN;
+const TOKEN = import.meta.env.VITE_TMDB_TOKEN;
 
 const movieInstance = axios.create({
-  baseURL: 'https://themoviedb.org', 
+  baseURL: 'https://themoviedb.org',
   headers: {
     Authorization: `Bearer ${TOKEN}`,
     accept: 'application/json',
